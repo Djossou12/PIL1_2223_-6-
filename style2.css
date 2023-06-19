@@ -30,32 +30,19 @@ body {
 
 p{
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 23px;
     position: absolute;
     top: 6.5cm;
     left: 2.5cm;
     color: snow;
 }
 
-form p{
-    position: relative;
-    font-family: Montserrat;
-    font-size: 20px;
-    bottom: 50px; /* Place le paragraphe à 50px du bas */
-    top: 21px;
-    right: 34px;
-    left: 14px;
-    color: black;
-    
-    
-}
-
 
 .container {
   position: relative;
   overflow: hidden;
-  width: 450px; /* Nouvelle taille du conteneur */
-  height: 610px; /* Nouvelle taille du conteneur */
+  width: 400px; /* Nouvelle taille du conteneur */
+  height: 500px; /* Nouvelle taille du conteneur */
   background-color: snow;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 32, 63, .45), 0 8px 8px rgba(0, 32, 63, .45);
@@ -73,8 +60,6 @@ form p{
   width: 100%;
   transition: .6s ease-in-out;
 }
-
-
 
 
 form {
@@ -132,15 +117,13 @@ button:active {
 
 h1 {
   position: absolute;
-  top: 0.8cm; /* Déplace le h1 de 50px vers le haut */
+  top: 50px; /* Déplace le h1 de 50px vers le haut */
   font-size: 24px;
 }
 
 span {
   position: absolute;
-  top: 1.5cm; /* Déplace le span de 85px vers le haut */
+  top: 85px; /* Déplace le span de 85px vers le haut */
   font-size: 14px;
 }
 
-
-  
