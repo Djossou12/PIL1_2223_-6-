@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .class-login {
+            padding: 40px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body class="class-login">
+    
+    <div class="container">
+        <form action="#">
+            <a href="inscription.html" class="back-to-top"><button class="btn btn-secondary">Retour</button></a>          
+            <h1>Connexion</h1>
+            <div class="form-group">
+                <label for="username">Login :</label>
+                <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" class="form-control" id="password" placeholder="Mot de passe" name="password">
+            </div>
+            <div class="form-group">
+                <label><a href="forgotpassword.html" class="a1">Mot de passe oublié</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary" name="Connexion">Connexion</button>
+            <div class="form-group">
+                <label>N'avez-vous pas de compte?</label>
+                <label>Cliquez ici :</label>       
+                <a href="inscription.html" class="a1">Inscrivez-vous</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Votre contenu HTML -->
+
+    <a id="top"></a>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
