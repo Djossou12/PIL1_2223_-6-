@@ -1,0 +1,90 @@
+
+body{
+    background: linear-gradient(to right top, #6E8195 15%, #8ac3e9 100% );
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 150px;
+    color:#fff;
+    text-shadow: 1px 5px 5px rgb(109, 101, 101);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.icon{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+     
+}
+form{
+   text-align: center;
+    background: transparent;
+    border: 1px solid;
+    position: absolute;
+    right: 10px;
+    border: none;
+    padding: 20px;
+    bottom: 0;
+}
+a{
+    color: #ddd;
+    text-decoration: none;
+    margin: 10px;
+    transition: all .6;
+}
+a:hover {
+
+    text-shadow: 2px 2px 6px rgba(0,0,0);
+}
+input{
+    border: none;
+    padding: 8px;
+    background: #fff;
+    box-shadow: 1px 5px 5px rgb(109, 101, 101);
+    margin-left: 0;
+    margin-right: 8px;
+    margin-bottom: 20px;
+   border-top-right-radius: 7px;
+   border-bottom-right-radius: 7px;
+   width: 300px;
+   height: 20px;
+}
+::placeholder{
+    font-weight: 400px;
+    color: grey;
+    font-family:'Courier New', Courier, monospace;
+
+}
+.boxes{
+    margin: 20px;
+}
+button{
+    box-shadow: 1px 5px 5px rgb(109, 101, 101);
+    height: 30px;
+    border: none;
+    width: 100px;
+    border-radius: 50px;
+    color: blue;
+    margin-bottom: 30px;
+}
+button:hover {
+    -webkit-transform:scale(1.25); /* Safari et Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* Internet Explorer 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.2);
+    cursor: pointer;
+}
+.icones{
+    height: 40px;
+    width: 40px;
+    
+}
