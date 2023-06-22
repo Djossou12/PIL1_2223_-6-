@@ -28,6 +28,17 @@ form{
     backdrop-filter: blur(20px);
     -moz-backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    transform: translateZ(100px);
+    opacity: 0;
+    animation: apparition 0.9s 1s ease-out forwards;
+   
+}
+
+@keyframes apparition{
+    100%{
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 h1{
     font-weight: 500;
@@ -81,7 +92,7 @@ input{
     transition: all .3;
 }
 ::placeholder{
-    color: white;
+    color:blue
 }
 input:hover,
 input[type="email"]:focus,
