@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+    </head>
+    <body>
+        <center>
+            <form name="register" method="post" action="insertuser">
+                {%{% csrf_token %}%}
+                <pre>
+                    ID: <input type="text" name="tuid" value="" width="500"><br>
+                    NAME: <input type="text" name="tuname" value="" width="500"><br>
+                    EMAIL: <input type="text" name="tuemail" value="" width="500"><br>
+
+                    <input type="submit" name="reg" value="Cliquer" width="500" height="200"> 
+                </pre>
+            </form>
+        </center>
+          
+    </body>
+</html>
