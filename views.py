@@ -1,7 +1,7 @@
 from ssl import HAS_TLSv1_1
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import User
+from .models import Users
 from admins.models import Band
 
 def hello(request):
@@ -14,17 +14,16 @@ def text (request):
     return HttpResponse('<div class="aire1"><section id="con">  <h1>ODISHOP</h1><form action="contact">    <div class="oup">      <label for="name"></label>  <input type="text" placeholder="Entrer votre nom ou votre email" required/></div><div class="oup"> <label for="pasword"></label><input type="pasword" name="mot de passe" placeholder="Entrer le mot de passe" required/></div><div style="padding-left: 275px;"> <a href="">Mot de passe oublier?</a> </div><div classe="oup"> <button type="submit">Se connecter</button></div></form><div id="fot"> Vous navaez pas de compte? <a href="">Inscrivez-vous</a> </div></section> </div>')
 
 def inscription(request):
-    return render(request,'listings/inscription.html')
+    return render(request,'listings/inscription.html',{})
 def login(request):
-    return render(request,'listings/login.html')
+    return render(request,'listings/login.html',{})
 
-def user(request):
-    return render(request,'listings/user.html',{})
 
-def insertuser(request):
-    vuid = request.POST['tuid'];
+def inscript(request):
     vuname = request.POST['tuname'];
+    vupre = request.POST['tupre'];
     vuemail = request.POST['tuemail'];
-    us=User(uid=vuid, uname=vuname, uemail=vuemail);
+    vupass= request.POST['tupass'] = request.POST['tucon'];
+    us= Users(Nom= vuname,Prenom=vupre, Email=vuemail,Mot=vupass);
     us.save();
     return render(request,'listings/hello.html',{});
