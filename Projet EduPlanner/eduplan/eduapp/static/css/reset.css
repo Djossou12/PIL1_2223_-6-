@@ -1,0 +1,62 @@
+@font-face{
+    font-family: "Great Vibes";
+    src: url("../fonts/Great_Vibes/GreatVibes-Regular.ttf ");
+  }
+  
+@font-face{
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+  }
+
+
+body
+{
+    margin:0;
+    padding: 0;
+
+}
+.entete
+{
+    background-color: #1D334A;
+    padding: 15px; 
+}
+.entete p
+{
+    font-family: 'Great Vibes';
+    color:#acf0d9 ;
+    font-size: 60px;
+    margin: 0; 
+}
+.cor
+{
+    margin: 50px;
+   
+}
+.rei
+{
+    font-family: 'Poppins';
+    color: #1D334A;
+}
+.cor p,input ,label
+{
+    font-family:"segoe ui", verdana, helvetica, arial, sans-serif;
+}
+input
+{
+    padding: 10px;
+    margin: 10px;
+}
+button
+{
+    padding: 15px 10px;
+    background-color: #0ea875;
+    color: #f9f9f9 ;
+    font-size: 15px;
+    border: none;
+    border-radius:3px ;
+    transition: all .5s ease;
+}
+button:hover
+{
+    background-color: #1D334A;
+}
