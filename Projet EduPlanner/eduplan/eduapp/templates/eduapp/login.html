@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/log.css'%}">
+    <style>
+        .alert-success
+        {
+            background-color: #dd0000;
+            font-size: 15px;
+            padding: 14px;
+            margin: 5px auto;
+            width: 90%;
+            color: #f9f9f9;
+            border-radius: 5px;
+
+        }
+        .am
+        {
+            text-decoration: none;
+            color: midnightblue;
+            font-size: 15px;
+        }
+        .am:hover
+        {
+            color: #298017;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="tex">
+            <p class="ti">Eduplanner</p>
+            <p>Avec EDUPLANNER, consultez  vos emplois du temps </p>
+        </div>
+        <div id="container">
+            <form method ="POST" action="">
+                {% csrf_token %}
+                <div class="ht">
+                    <p>Connexion</p>
+                </div> 
+                <div class="ht2">
+                    <label for="">Utilisateur</label>
+                    <br>
+                    <input type="text" placeholder="Entrez votre nom" name="username">
+                    <br>
+                    <label for="">Mot de passe</label>
+                    <input type="password" placeholder="Entrez votre mot de passe" name="password">
+                    <br>
+                    <label><a href="{% url 'password_reset' %}" class="am">Mot de passe oublié?</a></label><br>
+                    <div class="c">
+                        <input type="submit" name="Connexion" value="Se connecter">
+                    </div>
+                    {% for message in messages %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+    
+                    <label >N'avez-vous pas de compte?</label><a href="{% url 'signup' %}" class="ai">Inscrivez-vous</a>
+                </div>        
+               
+            </form>
+        </div>
+    
+    </div>
+    
+    <!-- Votre contenu HTML -->
+
+</body>
+</html>
