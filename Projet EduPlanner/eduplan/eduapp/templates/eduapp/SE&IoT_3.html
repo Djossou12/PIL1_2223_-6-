@@ -1,0 +1,75 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/licence1ep.css'%}">
+    <title>Etudiant en licence 3 de SE&IoT</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <hr>
+    <h1 style="text-align: center; background-color: aquamarine; font-size: 2em;color: #112438;">Bienvenue sur <span class="l">Eduplanner</span> (Emploi du temps Licence 3)</h1>
+    <hr>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index'%}">Accueil</a></li>
+            <li class="deroulant"><a href="#">Consultation des emplois du temps publiés</a>
+                <ul class="sous">
+                    <li><a href="Emploisdutempslicence1">Licence 1</a></li>
+                    <li><a href="Emploisdutempslicence2">Licence 2</a></li>
+                    <li><a href="Emploisdutempslicence3">Licence 3</a></li>
+                </ul>
+            </li>
+            <li><a href="admin">Planification des emplois de temps</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div class='filiere' style="text-align: center;">
+        <h1>ETUDIANT EN LICENCE 3 DE SE&IoT</h1>
+    </div>
+    <table>
+        <tr>
+            <th>Jours:</th>
+            {% for book11 in books %}
+            <th>{{ book11.Jours }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Matières:</td>
+            {% for book11 in books %}
+            <th>{{ book11.Matières }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>Heures:</td>
+            {% for book11 in books %}
+            <th>{{ book11.Heures}}</th>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+
+
+</html>
