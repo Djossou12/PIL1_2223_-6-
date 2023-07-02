@@ -92,6 +92,7 @@ def signup(request):
 
 
 
+
 @login_required(login_url='login')
 def index(request):
     if request.user.is_superuser:
@@ -105,19 +106,44 @@ def index(request):
 
 
 def profile(request):
-    return render(request,'eduapp/profile.html')
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a}
+    else :
+        context={}
+    return render(request,'eduapp/profile.html',context)
 
 def etudiant(request):
-    return render(request,'eduapp/etudiant.html')
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a}
+    else :
+        context={}
+    return render(request,'eduapp/etudiant.html',context)
 
 def licence1ep(request):
-    return render(request,'eduapp/licence1ep.html')
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a}
+    else :
+        context={}
+    return render(request,'eduapp/licence1ep.html',context)
 
 def licence2ep(request):
-    return render(request,'eduapp/licence2ep.html')
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a}
+    else :
+        context={}
+    return render(request,'eduapp/licence2ep.html',context)
 
 def licence3ep(request):
-    return render(request,'eduapp/licence3ep.html')
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a}
+    else :
+        context={}
+    return render(request,'eduapp/licence3ep.html',context)
 
 def massehoraire1(request):
     return render(request,'eduapp/massehoraire1.html')
@@ -129,64 +155,127 @@ def massehoraire3(request):
     return render(request,'eduapp/massehoraire3.html')
 
 def IA1(request):
-    context = {"filieres": IA_1.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": IA_1.objects.all()}
+    else :
+        context = {"filieres": IA_1.objects.all()}
     return render(request,'eduapp/IA_1.html',context)
 
 def IA2(request):
-    context = {"filieres": IA_2.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": IA_2.objects.all()}
+    else :
+        context = {"filieres": IA_2.objects.all()}
     return render(request,'eduapp/IA_2.html',context)
 
 def IA3(request):
-    context = {"filieres": IA_3.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": IA_3.objects.all()}
+    else :
+        context = {"filieres": IA_3.objects.all()}
     return render(request,'eduapp/IA_3.html',context)
 
 def IM1(request):
-    context = {"filieres": IM_1.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": IM_1.objects.all()}
+    else :
+        context = {"filieres": IM_1.objects.all()}
     return render(request,'eduapp/IM_1.html',context)
 
 def IM2(request):
-    context = {"filieres": IM_2.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres":IM_2.objects.all()}
+    else :
+        context = {"filieres": IM_2.objects.all()}
     return render(request,'eduapp/IM_2.html',context)
 
 def IM3(request):
-    context = {"filieres": IM_3.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": IM_3.objects.all()}
+    else :
+        context = {"filieres": IM_3.objects.all()}
     return render(request,'eduapp/IM_3.html',context)
 
 def GL1(request):
-     context = {"filieres": GL_1.objects.all()}
-     return render(request,'eduapp/GL_1.html',context)
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": GL_1.objects.all()}
+    else :
+        context = {"filieres": GL_1.objects.all()}
+    return render(request,'eduapp/GL_1.html',context)
 
 def GL2(request):
-    context = {"filieres": GL_2.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": GL_2.objects.all()}
+    else :
+        context = {"filieres": GL_2.objects.all()}
     return render(request,'eduapp/GL_2.html',context)
 
 def GL3(request):
-    context = {"filieres": GL_3.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": GL_3.objects.all()}
+    else :
+        context = {"filieres": GL_3.objects.all()}
     return render(request,'eduapp/GL_3.html',context)
 
 def SEIoT1(request):
-    context = {"filieres": SEIOT_1.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": SEIOT_1.objects.all()}
+    else :
+        context = {"filieres": SEIOT_1.objects.all()}
     return render(request,'eduapp/SE&IoT_1.html',context)
 
 def SEIoT2(request):
-    context = {"filieres": SEIOT_2.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": SEIOT_2.objects.all()}
+    else :
+        context = {"filieres": SEIOT_2.objects.all()}
     return render(request,'eduapp/SE&IoT_2.html',context)
 
 def SEIoT3(request):
-    context = {"filieres": SEIOT_3.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": SEIOT_3.objects.all()}
+    else :
+         context = {"filieres": SEIOT_3.objects.all()}
     return render(request,'eduapp/SE&IoT_3.html',context)
 
 def SI1(request):
-    context = {"filieres": SI_1.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": SI_1.objects.all()}
+    else :
+        context = {"filieres": SI_1.objects.all()}
     return render(request,'eduapp/SI_1.html',context)
 
 def SI2(request):
-    context = {"filieres": SI_2.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": SI_2.objects.all()}
+    else :
+        context = {"filieres": SI_2.objects.all()}
     return render(request,'eduapp/SI_2.html',context)
 
 def SI3(request):
-    context = {"filieres": SI_3.objects.all()}
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a,"filieres": SI_3.objects.all()}
+    else :
+        context = {"filieres": SI_3.objects.all()}
     return render(request,'eduapp/SI_3.html',context)
+
+
+
 
 
 
