@@ -50,7 +50,9 @@
                             </ul>
                         </li>
                         <!-- <li><a href="#">Gestion des enseignements et de la masse horaire</a></li> -->
-                        <li><a href="admin">Planification des emplois de temps</a></li>
+                        {% if a %}
+                            <li><a href="admin">Planification des emplois de temps</a></li>
+                        {%endif%}
                         <li><a href="{% url 'logout'%} " class="logout">Se déconnecter </a></li>
                     </ul>
                 </nav>
