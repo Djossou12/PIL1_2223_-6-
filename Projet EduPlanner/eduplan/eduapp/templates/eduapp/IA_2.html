@@ -42,7 +42,9 @@
                     <li><a href="Emploisdutempslicence3">Licence 3</a></li>
                 </ul>
             </li>
-            <li><a href="admin">Planification des emplois de temps</a></li>
+            {% if a %}
+                <li><a href="admin">Planification des emplois de temps</a></li>
+            {%endif%}
         </ul>
     </nav>
     <hr>
