@@ -94,9 +94,14 @@ def signup(request):
 
 @login_required(login_url='login')
 def index(request):
-    context = {"message": "Hello World !"}
-    template = loader.get_template("eduapp/index.html")
-    return HttpResponse(template.render(context, request))
+    if request.user.is_superuser:
+        a=True
+        context = {"a": a}
+    else :
+        context={}
+    
+    return render(request, 'eduapp/index.html', context)
+
 
 
 def profile(request):
