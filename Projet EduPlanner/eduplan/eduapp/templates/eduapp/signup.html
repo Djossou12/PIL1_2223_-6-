@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="{% static 'css/sign.css'%}">
+    <link rel="shortcut icon" href="{% static 'css/logo.png'%}">
+    <style>
+        .errorlist
+        {
+            /* padding-left: 20px; */
+            list-style-position: inside;
+        }
+        .errorlist li
+        {
+            color: red;
+            list-style-position: inside;
+            /* padding-left: 10px; */
+        }
+        .cd
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body >
+    <div class="class-login">
+        <div id="container">
+            <form method ="POST" action="">
+                {% csrf_token %}
+                <div class="ht">
+                    <p class="t">Eduplanner Inscription</p>
+                </div> 
+                <div class="ht2">
+                    <label for="">Utilisateur :</label>
+                    <br>
+                    {{form.username}}
+                    <br>
+                    <label for="">Email :</label>
+                    <br>
+                    {{form.email}}
+                    <br>
+                    <label for="">Mot de passe :</label>
+                    {{form.password1}}
+                    <br>
+                    <label for="">Confirmation du mot de passe :</label>
+                    {{form.password2}}
+                    <br>
+                    <div class="c">
+                        <input type="submit" name="Connexion" value="S'inscrire">
+                    </div>
+                    <p>{{form.errors}}</p>
+                    
+                   <p class="cd"> <label >Vous avez déja un compte ?</label><a href="{% url 'login' %}" class="ai">Connectez-vous</a></p>
+                </div>        
+               
+            </form>
+        </div>
+          
+       
+    </div>
+    <a id="top"></a>
+</body>
+</html>
